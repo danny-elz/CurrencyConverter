@@ -5,7 +5,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("CHOOSE FROM TE FOLLOWING OPTIONS");
+        System.out.println("CHOOSE FROM THE FOLLOWING OPTIONS");
         System.out.println();
         System.out.println(" 0. Exit program");
         System.out.println(" 1. USD to CDN");
