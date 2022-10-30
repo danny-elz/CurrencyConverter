@@ -5,27 +5,31 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        System.out.println();
+        System.out.println("Currency Exchange");
+        System.out.println();
         System.out.println("CHOOSE FROM THE FOLLOWING OPTIONS");
         System.out.println();
-        System.out.println(" 0. Exit program");
-        System.out.println(" 1. USD to CDN");
-        System.out.println(" 2. CDN to USD");
-        System.out.println(" 3. USD to EURO");
-        System.out.println(" 4. EURO to USD");
-        System.out.println(" 5. EURO to POUND");
-        System.out.println(" 6. POUND to EURO");
+        System.out.println(" 0. EXIT PROGRAM");
+        System.out.println();
+        System.out.println(" 1. USD to CDN          7. USD to AUD");
+        System.out.println(" 2. CDN to USD          8. USD to INR");
+        System.out.println(" 3. USD to EURO         9. USD to CNY");
+        System.out.println(" 4. EURO to USD        10. USD to TRY");
+        System.out.println(" 5. EURO to POUND      11. USD to RUB");
+        System.out.println(" 6. POUND to EURO      12. USD to MXN");
 
         while (true) {
             System.out.println();
             System.out.print("?: ");
             String input = sc.next();
 
-            if(Integer.parseInt(input) == 0){
-                Thread.sleep(1000);
-                System.out.println("Goodbye");
-                break;
-            }
+
             switch (input) {
+                case "0":
+                    Thread.sleep(1500);
+                    System.out.println("Goodbye");
+                    break;
 
                 case "1":
                     System.out.print("Enter USD amount: ");
@@ -74,7 +78,60 @@ public class Main {
                     System.out.printf("%4.2f", Integer.parseInt(amount5) * 1.16554);
                     System.out.print(" EUROS\n");
                     break;
+
+                case "7":
+                    System.out.print("Enter USD amount: ");
+                    String amount6 = sc.next();
+                    System.out.print(amount6 + ".00 USD " + "-> ");
+                    System.out.printf("%4.2f", Integer.parseInt(amount6) * 1.56142 );
+                    System.out.print(" AUD\n");
+                    break;
+
+                case "8":
+                    System.out.print("Enter USD amount: ");
+                    String amount7 = sc.next();
+                    System.out.print(amount7 + ".00 USD " + "-> ");
+                    System.out.printf("%4.2f", Integer.parseInt(amount7) * 82.2910);
+                    System.out.print(" INR\n");
+                    break;
+
+                case "9":
+                    System.out.print("Enter USD amount: ");
+                    String amount8 = sc.next();
+                    System.out.print(amount8 + ".00 USD " + "-> ");
+                    System.out.printf("%4.2f", Integer.parseInt(amount8) * 7.23628);
+                    System.out.print(" CNY\n");
+                    break;
+
+                case "10":
+                    System.out.print("Enter USD amount: ");
+                    String amount9 = sc.next();
+                    System.out.print(amount9 + ".00 USD " + "-> ");
+                    System.out.printf("%4.2f", Integer.parseInt(amount9) * 18.5712);
+                    System.out.print(" TRY\n");
+                    break;
+
+                case "11":
+                    System.out.print("Enter USD amount: ");
+                    String amount10 = sc.next();
+                    System.out.print(amount10 + ".00 USD " + "-> ");
+                    System.out.printf("%4.2f", Integer.parseInt(amount10) * 61.5241);
+                    System.out.print(" RUB\n");
+                    break;
+
+                case "12":
+                    System.out.print("Enter USD amount: ");
+                    String amount11 = sc.next();
+                    System.out.print(amount11 + ".00 USD " + "-> ");
+                    System.out.printf("%4.2f", Integer.parseInt(amount11) * 19.8196);
+                    System.out.print(" MXN\n");
+                    break;
+
+                default :
+                    System.out.println("Invalid entry");
+                    break;
             }
+
         }
     }
 }
