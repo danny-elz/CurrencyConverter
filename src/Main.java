@@ -24,12 +24,14 @@ public class Main {
             System.out.print("?: ");
             String input = sc.next();
 
+            if(Integer.parseInt(input) == 0){
+                Thread.sleep(1500);
+                System.out.println("Goodbye");
+                break;
+            }
+
 
             switch (input) {
-                case "0":
-                    Thread.sleep(1500);
-                    System.out.println("Goodbye");
-                    break;
 
                 case "1":
                     System.out.print("Enter USD amount: ");
@@ -127,7 +129,7 @@ public class Main {
                     System.out.print(" MXN\n");
                     break;
 
-                default :
+                 default :
                     System.out.println("Invalid entry");
                     break;
             }
